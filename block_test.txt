@@ -1,0 +1,10 @@
+# load the model from disk
+filename='best_svm.sav'
+loaded_model = pickle.load(open(filename, 'rb'))
+musics=np.array(df.iloc[:,:-1],dtype=float)
+standardizer=StandardScaler()
+music_data=standardizer.fit_transform(np.array(df.iloc[:,:-1],dtype=float))
+music_data[999]
+music=np.array([music_data[999]])
+result = loaded_model.predict(music)
+print(result)

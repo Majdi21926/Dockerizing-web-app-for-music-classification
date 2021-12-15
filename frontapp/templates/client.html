@@ -1,0 +1,30 @@
+<html>
+   <style> 
+      input[type=button], input[type=submit], input[type=reset] {
+        background-color: white;
+        border: none;
+        color: black;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+      </style>
+
+   <body style="background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);">
+      <h1 style="color: aliceblue; padding-top: 20px; padding-left: 600px;">Testing Models</h1>
+      <h1 style="color: aliceblue; padding-top: 100px; padding-left: 600px;">vgg</h1>
+      <form action = "http://127.0.0.1:5000/vgg19" method = "POST"
+         enctype = "multipart/form-data">
+         <input  type = "file" name = "file" style="color: white; padding-left: 550px;" />
+         <input  type = "submit"/>
+      </form>   
+   
+      <h1  style="color: aliceblue;  padding-left: 600px;">svm</h1>
+      <form action = "http://127.0.0.1:5000/svm" method = "POST"
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" style="color: white; padding-left: 550px;" />
+         <input type = "submit"/>
+      </form>   
+   </body>
+</html>
